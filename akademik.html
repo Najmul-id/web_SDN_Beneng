@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="gambar/LOGO VORTICE_noText.png" type="image/png">
+    <title>SD Negeri Beneng - Akademik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">SD NEGERI BENENG</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="akademik.html" class="active">Akademik</a></li>
+                <li><a href="kesiswaan.html">Kesiswaan</a></li> <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h2>Informasi Akademik</h2>
+            <p>Kurikulum, Data Pengajar, dan Jadwal Kegiatan</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <h3 class="section-title">Kurikulum Sekolah</h3>
+            <div class="kurikulum-content">
+                <p>SD Negeri Beneng menerapkan <strong>Kurikulum Merdeka</strong> yang berpusat pada pengembangan karakter dan kompetensi siswa. Kami memadukan pembelajaran intrakurikuler dengan Proyek Penguatan Profil Pelajar Pancasila (P5).</p>
+                <ul class="kurikulum-list">
+                    <li><i class="fas fa-check"></i> Pembelajaran Berbasis Proyek</li>
+                    <li><i class="fas fa-check"></i> Fokus pada Materi Esensial</li>
+                    <li><i class="fas fa-check"></i> Fleksibilitas bagi Guru dan Siswa</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h3 class="section-title">Daftar Guru & Staff</h3>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari berdasarkan Kelas (misal: Kelas 1)...">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="teacher-grid" id="teacherGrid">
+                <div class="teacher-card" data-kelas="Kelas 1">
+                    <div class="teacher-img" style="background-color: #ccc;">
+                        <i class="fas fa-user"></i> </div>
+                    <h4>Budi Santoso, S.Pd</h4>
+                    <span class="badge">Wali Kelas 1</span>
+                    <p>NIP: 19800101 200501 1 001</p>
+                </div>
+
+                <div class="teacher-card" data-kelas="Kelas 2">
+                    <div class="teacher-img" style="background-color: #ccc;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Siti Aminah, S.Pd.SD</h4>
+                    <span class="badge">Wali Kelas 2</span>
+                    <p>NIP: 19850202 201001 2 005</p>
+                </div>
+
+                <div class="teacher-card" data-kelas="Kelas 6">
+                    <div class="teacher-img" style="background-color: #ccc;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Dedi Kurniawan, S.Pd</h4>
+                    <span class="badge">Wali Kelas 6</span>
+                    <p>NIP: 19790505 200012 1 003</p>
+                </div>
+                
+                <div class="teacher-card" data-kelas="Penjaskes">
+                    <div class="teacher-img" style="background-color: #ccc;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Rina Wati, S.Or</h4>
+                    <span class="badge">Guru Penjaskes</span>
+                    <p>NIP: 19901010 201503 2 009</p>
+                </div>
+            </div>
+            <p class="search-note">*Ketik "Kelas 1", "Kelas 6", atau mata pelajaran untuk memfilter.</p>
+        </div>
+    </section>
+
+<section class="section-padding">
+        <div class="container">
+            <h3 class="section-title">Kalender Akademik Semester Ganjil</h3>
+            <div class="table-responsive">
+                <table class="academic-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>Kegiatan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendarBody">
+                        <tr><td>1</td><td>15 Juli 2024</td><td>Hari Pertama Masuk Sekolah</td></tr>
+                        <tr><td>2</td><td>17 Agustus 2024</td><td>Upacara HUT RI ke-79</td></tr>
+                        <tr><td>3</td><td>20 September 2024</td><td>Imunisasi BIAS</td></tr>
+                        <tr><td>4</td><td>25 - 30 Sept 2024</td><td>Penilaian Tengah Semester (PTS)</td></tr>
+                        <tr><td>5</td><td>1 Oktober 2024</td><td>Peringatan Hari Kesaktian Pancasila</td></tr>
+                        
+                        <tr><td>6</td><td>28 Oktober 2024</td><td>Peringatan Sumpah Pemuda</td></tr>
+                        <tr><td>7</td><td>10 November 2024</td><td>Upacara Hari Pahlawan</td></tr>
+                        <tr><td>8</td><td>25 November 2024</td><td>Peringatan Hari Guru Nasional</td></tr>
+                        <tr><td>9</td><td>2 - 7 Des 2024</td><td>Penilaian Akhir Semester (PAS)</td></tr>
+                        <tr><td>10</td><td>15 - 19 Des 2024</td><td>Remedial & Pengolahan Nilai</td></tr>
+                        <tr><td>11</td><td>20 Desember 2024</td><td>Pembagian Rapor Semester 1</td></tr>
+                        <tr><td>12</td><td>21 - 31 Des 2024</td><td>Libur Semester Ganjil</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="text-center" style="margin-top: 20px; text-align: center;">
+                <button id="btnLoadMore" class="btn-small">Lihat Selengkapnya</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-area section-padding bg-light">
+        <div class="container">
+            <h3 class="section-title">Pusat Unduhan</h3>
+            <div class="grid-card">
+                <div class="card download-card">
+                    <i class="fas fa-file-pdf" style="color: #e74c3c;"></i>
+                    <h4>Kalender Akademik</h4>
+                    <a href="#" class="btn-small">Download PDF</a>
+                </div>
+                <div class="card download-card">
+                    <i class="fas fa-file-alt" style="color: #3498db;"></i>
+                    <h4>Brosur PPDB</h4>
+                    <a href="#" class="btn-small">Download PDF</a>
+                </div>
+                <div class="card download-card">
+                    <i class="fas fa-file-word" style="color: #2980b9;"></i>
+                    <h4>Formulir Pendaftaran</h4>
+                    <a href="#" class="btn-small">Download Doc</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SD Negeri Beneng</h4>
+                    <p>Mencetak generasi cerdas dan berakhlak mulia.</p>
+                </div>
+                <div class="footer-section" id="kontak">
+                    <h4>Hubungi Kami</h4>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 SD Negeri Beneng. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <a href="#" id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</body>
+</html>

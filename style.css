@@ -1,0 +1,498 @@
+/* VARIABEL WARNA SESUAI GAMBAR */
+:root {
+    --bg-light: #E7EFC7;    /* Krem Hijau Muda - Background Utama */
+    --accent-sage: #AEC8A4; /* Hijau Sage - Header/Section Secondary */
+    --accent-brown: #8A784E;/* Cokelat Zaitun - Tombol/Highlight */
+    --text-dark: #3B3B1A;   /* Hijau Tua Gelap - Teks Utama */
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--accent-sage);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--white);
+}
+
+.menu-toggle { display: none; cursor: pointer; font-size: 1.5rem; }
+
+/* HERO SLIDESHOW */
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active { opacity: 1; }
+
+.hero-content {
+    background: rgba(59, 59, 26, 0.5); /* Background transparan gelap */
+    color: var(--bg-light);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+/* GENERAL SECTION STYLES */
+.section-padding { padding: 4rem 0; }
+.section-title { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+
+/* ABOUT SECTION */
+.row { display: flex; gap: 2rem; flex-wrap: wrap; }
+.col-half { flex: 1; min-width: 300px; }
+.about ul li { margin-bottom: 10px; font-size: 1.1rem; }
+.about i { color: var(--accent-brown); margin-right: 10px; }
+
+/* STATS SECTION */
+.stats { background-color: var(--text-dark); color: var(--bg-light); }
+.stats-grid { display: flex; justify-content: space-around; text-align: center; flex-wrap: wrap; }
+.stat-item { margin: 1rem; }
+.stat-item h3 { font-size: 2.5rem; color: var(--accent-sage); }
+.stat-item i { font-size: 2rem; margin-bottom: 10px; }
+
+/* FACILITIES CARD */
+.grid-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border-top: 5px solid var(--accent-brown);
+}
+
+.card:hover { transform: translateY(-5px); }
+.card i { font-size: 2.5rem; color: var(--accent-brown); margin-bottom: 1rem; }
+
+/* PPDB SECTION */
+.ppdb { background-color: var(--accent-sage); text-align: center; }
+.btn-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: var(--accent-brown);
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-cta:hover { background-color: var(--text-dark); transform: scale(1.05); }
+
+/* ############################################################## */
+
+/* --- TAMBAHAN HALAMAN AKADEMIK --- */
+
+/* Page Header (Judul Halaman) */
+.page-header {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+/* Style Pencarian */
+.search-box {
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    position: relative;
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid var(--accent-sage);
+    border-radius: 50px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-brown);
+}
+
+.search-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Grid Guru */
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.teacher-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    border-bottom: 4px solid var(--accent-sage);
+}
+
+.teacher-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #eee;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #888;
+}
+
+.teacher-card h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--text-dark); }
+.teacher-card p { font-size: 0.85rem; color: #666; }
+
+.badge {
+    display: inline-block;
+    background-color: var(--accent-brown);
+    color: var(--white);
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+/* Tabel Kalender */
+.table-responsive { overflow-x: auto; }
+
+.academic-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border: 1px solid #888;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.academic-table th, .academic-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.academic-table th {
+    background-color: var(--accent-sage);
+    color: var(--text-dark);
+}
+
+.academic-table tr:hover { background-color: var(--bg-light); }
+
+.academic-table td {
+    border: 1px solid #888;
+    text-align: center;
+}
+
+/* Style Tombol Kecil (Load More) */
+.btn-small {
+    background-color: transparent;
+    color: var(--accent-brown);
+    border: 2px solid var(--accent-brown);
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-small:hover {
+    background-color: var(--accent-brown);
+    color: var(--white);
+}
+
+/* ######################################################################## */
+/* --- TAMBAHAN HALAMAN KESISWAAN --- */
+
+/* Prestasi List */
+.achievement-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--accent-brown);
+    transition: transform 0.3s;
+}
+
+.achievement-item:hover { transform: translateX(10px); }
+
+.trophy-icon {
+    font-size: 2.5rem;
+    color: var(--accent-brown);
+    margin-right: 20px;
+    width: 60px;
+    text-align: center;
+}
+
+.achievement-text h4 { font-size: 1.2rem; color: var(--text-dark); margin-bottom: 5px; }
+.achievement-text p { font-size: 0.9rem; color: #666; margin-bottom: 5px; }
+
+/* Galeri Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    z-index: 2;
+}
+/* ######################################################################## */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-brown);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: none; /* Nanti dimunculkan pakai JS saat scroll */
+}
+/* ######################################################################## */
+/* --- TAMBAHAN 5 REKOMENDASI --- */
+
+/* 1. Sambutan Kepala Sekolah */
+.kepsek-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.kepsek-img {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.kepsek-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0px var(--accent-sage); /* Efek bayangan unik */
+}
+
+.kepsek-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.kepsek-text h3 {
+    color: var(--accent-brown);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.kepsek-text p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.kepsek-sign strong { font-size: 1.1rem; color: var(--text-dark); display: block; }
+.kepsek-sign span { font-size: 0.9rem; color: #888; }
+
+/* 2. Download Area */
+.download-card {
+    border-top: none; /* Reset style card lama */
+    border-left: 5px solid var(--accent-sage);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.download-card i { font-size: 3rem; margin-bottom: 15px; }
+
+/* 3. Back To Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--accent-brown);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0; /* Tersembunyi di awal */
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    background-color: var(--text-dark);
+    transform: translateY(-5px);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsif untuk Kepsek */
+@media (max-width: 768px) {
+    .kepsek-wrapper { flex-direction: column; text-align: center; }
+    .kepsek-img img { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+}
+
+/* responsif untuk map */
+/* --- MAPS RESPONSIF --- */
+.map-container {
+    position: relative;
+    width: 100%;
+    /* Rasio 16:9 (56.25% adalah 9 dibagi 16) */
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px; /* Sudut melengkung agar cantik */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #eee; /* Warna loading sementara */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* ######################################################################## */
+
+
+
+/* FOOTER */
+footer { background-color: var(--text-dark); color: var(--bg-light); padding-top: 2rem; }
+.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+.socials li { margin-bottom: 10px; }
+.socials a:hover { color: var(--accent-sage); }
+.footer-bottom { text-align: center; border-top: 1px solid #555; padding: 1rem 0; font-size: 0.9rem; }
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Bisa dikembangkan dengan JS untuk toggle menu */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: var(--accent-sage);
+        position: absolute;
+        top: 60px; left: 0;
+    }
+    .nav-links.active { display: flex; }
+    .menu-toggle { display: block; }
+    .hero { height: 350px; }
+    .hero-content h2 { font-size: 1.5rem; }
+}
